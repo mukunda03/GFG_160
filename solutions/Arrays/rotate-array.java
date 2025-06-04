@@ -30,3 +30,47 @@ class Solution {
         }
     }
 }
+
+// User function Template for Java
+/*
+Juggling algorithm
+TC = O(n)
+SC = O(1)
+*/
+class Solution2 {
+    // Function to rotate an array by d elements in counter-clockwise direction.
+    static void rotateArr(int arr[], int d) {
+        // add your code here
+        int n = arr.length;
+        d %=n;
+        
+        int cycles = gcd(n,d);
+        
+        for(int i =0;i<cycles;i++){
+            int startele = arr[i];
+            
+            int curInd = i;
+            int nxtInd;
+            
+            while(true){
+                nxtInd = (curInd+d)%n;
+                if(nxtInd == i)
+                break;
+                
+                arr[curInd] = arr[nxtInd];
+                curInd = nxtInd;
+                
+            }
+            arr[curInd] = startele;
+        }
+    }
+    static int gcd(int a, int b){
+            while(b != 0){
+                int temp = b;
+                b = a%b;
+                a = temp;
+            }
+            return a;
+        }
+}
+
