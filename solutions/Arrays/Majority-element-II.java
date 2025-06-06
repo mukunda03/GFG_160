@@ -20,16 +20,16 @@ class Solution2 {
         int cnt1=0;
         int cnt2 = 0;
         
-        for(int i:nums){
-            if(cand1 == i){
+        for(int cand:nums){
+            if(cand1 == cand){
                 cnt1++;
-            }else if(cand2 == i){
+            }else if(cand2 == cand){
                 cnt2++;
             }else if(cnt1 == 0){
-                cand1 = i;
+                cand1 = cand;
                 cnt1++;
             }else if(cnt2 == 0){
-                cand2 = i;
+                cand2 = cand;
                 cnt2++;
             }else{
                 cnt1--;
@@ -41,11 +41,11 @@ class Solution2 {
         cnt1=0;
         cnt2=0;
         
-        for(int i:nums){
-            if(cand1 == i){
+        for(int cand:nums){
+            if(cand1 == cand){
                 cnt1++;
             }
-            if(cand2 == i){
+            if(cand2 == cand){
                 cnt2++;
             }
         }
