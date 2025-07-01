@@ -1,5 +1,5 @@
 /*
-Time Complexity : O(nlogn)
+Time Complexity : O(logn)
 Space Complexity : O(1)  
 
 linkedIn : www.linkedin.com/in/mukundasv03 
