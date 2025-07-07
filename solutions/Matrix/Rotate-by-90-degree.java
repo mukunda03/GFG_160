@@ -1,0 +1,33 @@
+/*
+Time Complexity : O(n^2)
+Space Complexity : O(1) 
+
+linkedIn : www.linkedin.com/in/mukundasv03 
+Github : https://github.com/mukunda03
+*/
+
+class Solution {
+    public void rotateMatrix(int[][] mat) {
+        // code here
+        int n = mat.length;
+        
+        for(int i =0;i<n;i++){
+            int start = 0, end = n-1;
+            while(start < end){
+                int temp = mat[i][start];
+                mat[i][start] = mar[i][end];
+                mat[i][end] = temp;
+                start++;
+                end--;
+            }
+        }
+        
+        for(int i =0;i< n ;i++){
+            for(int j = i+1;j< n;j++){
+                int temp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = temp;
+            }
+        }
+    }
+}
