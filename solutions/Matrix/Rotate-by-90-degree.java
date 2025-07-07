@@ -15,7 +15,7 @@ class Solution {
             int start = 0, end = n-1;
             while(start < end){
                 int temp = mat[i][start];
-                mat[i][start] = mar[i][end];
+                mat[i][start] = mat[i][end];
                 mat[i][end] = temp;
                 start++;
                 end--;
