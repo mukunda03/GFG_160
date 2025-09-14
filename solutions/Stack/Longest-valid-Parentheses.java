@@ -17,13 +17,13 @@ class Solution {
         for(int i =0;i<s.length();i++){
             
             if(s.charAt(i) == '('){
-                st.push();
+                st.push(i);
             }else{
                 st.pop();
                 if(st.isEmpty()){
-                    st.push();
+                    st.push(i);
                 }else{
-                    maxLen = Math.max(maxLen,i, -st.peek());
+                    maxLen = Math.max(maxLen,i-st.peek());
                 }
             }
         }
